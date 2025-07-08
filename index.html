@@ -6,6 +6,7 @@
   <title>AiFixPro</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <style>
     body {
       background-color: #ffffff;
@@ -29,6 +30,9 @@
     .active-link {
       font-weight: bold;
       color: #4f46e5 !important;
+    }
+    .group:hover .group-hover\:block {
+      display: block;
     }
   </style>
 </head>
@@ -71,42 +75,8 @@
   <section class="bg-gray-100 py-20 px-6 text-center" data-aos="fade-up">
     <h1 class="text-4xl md:text-6xl font-bold mb-4">AI Fuelled Consultancy Services</h1>
     <p class="text-lg md:text-xl max-w-2xl mx-auto">Transform your business with cutting-edge automation, data insights, and strategy consulting.</p>
+    <img src="https://source.unsplash.com/featured/?technology,analytics" alt="Hero Image" class="mx-auto mt-8 rounded shadow-md max-w-full h-auto">
     <a href="#contact" class="mt-8 inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700">Get in Touch</a>
-  </section>
-
-  <section id="consultancy" class="py-20 px-6">
-    <h2 class="text-3xl font-bold text-center mb-8" data-aos="zoom-in">Consultancy - Data & Tech</h2>
-    <div class="max-w-4xl mx-auto text-center text-gray-600">
-      <p>We provide full-spectrum consulting services from data infrastructure and engineering to technical governance and cloud migration strategy.</p>
-    </div>
-  </section>
-
-  <section id="media-strategy" class="py-20 px-6 bg-gray-50">
-    <h2 class="text-3xl font-bold text-center mb-8" data-aos="zoom-in">Media Strategy</h2>
-    <div class="max-w-4xl mx-auto text-center text-gray-600">
-      <p>Data-led media planning, audience strategy, and cross-channel orchestration to maximize ROI and reach.</p>
-    </div>
-  </section>
-
-  <section id="media-ops" class="py-20 px-6">
-    <h2 class="text-3xl font-bold text-center mb-8" data-aos="zoom-in">Media Operations</h2>
-    <div class="max-w-4xl mx-auto text-center text-gray-600">
-      <p>Enable seamless media operations with automation workflows, QA processes, tagging frameworks and centralized measurement infrastructure.</p>
-    </div>
-  </section>
-
-  <section id="governance" class="py-20 px-6 bg-gray-50">
-    <h2 class="text-3xl font-bold text-center mb-8" data-aos="zoom-in">Governance</h2>
-    <div class="max-w-4xl mx-auto text-center text-gray-600">
-      <p>Build sustainable data governance, compliance, and measurement maturity frameworks to ensure future-readiness and accountability.</p>
-    </div>
-  </section>
-
-  <section id="cloud" class="py-20 px-6">
-    <h2 class="text-3xl font-bold text-center mb-8" data-aos="zoom-in">Cloud Services</h2>
-    <div class="max-w-4xl mx-auto text-center text-gray-600">
-      <p>We help clients leverage Google Cloud Platform, BigQuery, Firebase, and modern cloud-native tools to power transformation and speed to market.</p>
-    </div>
   </section>
 
   <footer class="bg-gray-900 text-white py-6 text-center" data-aos="fade-in">
@@ -114,6 +84,8 @@
   </footer>
 
   <script>
+    AOS.init();
+
     const sections = document.querySelectorAll("section[id]");
     const navLinks = document.querySelectorAll("nav a[href^='#']");
     window.addEventListener("scroll", () => {
