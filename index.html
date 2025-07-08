@@ -30,17 +30,6 @@
       font-weight: bold;
       color: #4f46e5 !important;
     }
-    .tab-content {
-      transition: opacity 0.4s ease-in-out, transform 0.3s ease-in-out;
-      opacity: 0;
-      transform: scale(0.97);
-      display: none;
-    }
-    .tab-content.active {
-      opacity: 1;
-      transform: scale(1);
-      display: block;
-    }
   </style>
 </head>
 <body>
@@ -59,13 +48,13 @@
           <div class="relative group">
             <button class="block px-4 py-2 text-sm text-gray-700 w-full text-left hover:bg-indigo-100">Analytics ▸</button>
             <div class="absolute left-full top-0 hidden group-hover:block bg-white border rounded shadow mt-0 ml-1 z-20 min-w-max">
-              <a href="#analytics" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-100">MMM</a>
-              <a href="#analytics" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-100">Causal Impact</a>
-              <a href="#analytics" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-100">Scenario Planner</a>
-              <a href="#analytics" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-100">Budget Optimizer</a>
-              <a href="#analytics" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-100">Multi-Cell</a>
-              <a href="#analytics" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-100">Next Best Target</a>
-              <a href="#analytics" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-100">Stat Significance</a>
+              <a href="mmm.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-100">MMM</a>
+              <a href="causal-impact.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-100">Causal Impact</a>
+              <a href="scenario-planner.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-100">Scenario Planner</a>
+              <a href="budget-optimizer.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-100">Budget Optimizer</a>
+              <a href="multi-cell.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-100">Multi-Cell</a>
+              <a href="next-best-target.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-100">Next Best Target</a>
+              <a href="stat-significance.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-100">Stat Significance</a>
             </div>
           </div>
           <a href="#media-strategy" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-100">Media Strategy</a>
@@ -79,26 +68,45 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
   <section class="bg-gray-100 py-20 px-6 text-center" data-aos="fade-up">
     <h1 class="text-4xl md:text-6xl font-bold mb-4">AI Fuelled Consultancy Services</h1>
     <p class="text-lg md:text-xl max-w-2xl mx-auto">Transform your business with cutting-edge automation, data insights, and strategy consulting.</p>
     <a href="#contact" class="mt-8 inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700">Get in Touch</a>
   </section>
 
-  <!-- Analytics Section -->
-  <section id="analytics" class="py-20 px-6 bg-white">
-    <h2 class="text-3xl font-bold text-center mb-12" data-aos="zoom-in">Our Services – Analytics</h2>
-    <div class="flex justify-center flex-wrap gap-4 mb-6">
-      <button onclick="showTab('mmm')" class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded">MMM</button>
-      <button onclick="showTab('cia')" class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded">Causal Impact</button>
-      <button onclick="showTab('planner')" class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded">Scenario Planner</button>
-      <button onclick="showTab('budget')" class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded">Budget Optimizer</button>
-      <button onclick="showTab('multi')" class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded">Multi-Cell</button>
-      <button onclick="showTab('next')" class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded">Next Best Target</button>
-      <button onclick="showTab('stat')" class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded">Stat Significance</button>
+  <section id="consultancy" class="py-20 px-6">
+    <h2 class="text-3xl font-bold text-center mb-8" data-aos="zoom-in">Consultancy - Data & Tech</h2>
+    <div class="max-w-4xl mx-auto text-center text-gray-600">
+      <p>We provide full-spectrum consulting services from data infrastructure and engineering to technical governance and cloud migration strategy.</p>
     </div>
-    <!-- Tab Content Remains Same -->
+  </section>
+
+  <section id="media-strategy" class="py-20 px-6 bg-gray-50">
+    <h2 class="text-3xl font-bold text-center mb-8" data-aos="zoom-in">Media Strategy</h2>
+    <div class="max-w-4xl mx-auto text-center text-gray-600">
+      <p>Data-led media planning, audience strategy, and cross-channel orchestration to maximize ROI and reach.</p>
+    </div>
+  </section>
+
+  <section id="media-ops" class="py-20 px-6">
+    <h2 class="text-3xl font-bold text-center mb-8" data-aos="zoom-in">Media Operations</h2>
+    <div class="max-w-4xl mx-auto text-center text-gray-600">
+      <p>Enable seamless media operations with automation workflows, QA processes, tagging frameworks and centralized measurement infrastructure.</p>
+    </div>
+  </section>
+
+  <section id="governance" class="py-20 px-6 bg-gray-50">
+    <h2 class="text-3xl font-bold text-center mb-8" data-aos="zoom-in">Governance</h2>
+    <div class="max-w-4xl mx-auto text-center text-gray-600">
+      <p>Build sustainable data governance, compliance, and measurement maturity frameworks to ensure future-readiness and accountability.</p>
+    </div>
+  </section>
+
+  <section id="cloud" class="py-20 px-6">
+    <h2 class="text-3xl font-bold text-center mb-8" data-aos="zoom-in">Cloud Services</h2>
+    <div class="max-w-4xl mx-auto text-center text-gray-600">
+      <p>We help clients leverage Google Cloud Platform, BigQuery, Firebase, and modern cloud-native tools to power transformation and speed to market.</p>
+    </div>
   </section>
 
   <footer class="bg-gray-900 text-white py-6 text-center" data-aos="fade-in">
@@ -130,13 +138,6 @@
         header.classList.remove("scrolled");
       }
     });
-
-    function showTab(id) {
-      const tabs = document.querySelectorAll('.tab-content');
-      tabs.forEach(tab => tab.classList.remove('active'));
-      const activeTab = document.getElementById(id);
-      if (activeTab) activeTab.classList.add('active');
-    }
   </script>
 </body>
 </html>
