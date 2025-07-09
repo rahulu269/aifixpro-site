@@ -169,7 +169,7 @@
             color: #ccc; /* Lighter text for main paragraphs */
         }
         
-        /* New styles for the direct link to Google Form */
+        /* Styles for the direct link to Google Form */
         .google-form-link-container {
             margin-top: 50px;
             background: rgba(255, 255, 255, 0.05);
@@ -242,12 +242,56 @@
         .results-info a:hover {
             text-decoration: underline;
         }
+
+        /* New section for results display */
+        .results-display-section {
+            padding: 80px 0;
+            background: #0a0a0a; /* Slightly darker background for this section */
+            color: #fff;
+            text-align: center;
+        }
+
+        .results-display-section h2 {
+            font-size: 2.5rem;
+            color: #2196F3;
+            margin-bottom: 40px;
+        }
+
+        .results-display-section p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+            line-height: 1.8;
+            color: #ccc;
+        }
+
+        .results-link-button {
+            display: inline-block;
+            background: #4CAF50; /* Green button for results */
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.3s ease, transform 0.2s ease;
+            margin-top: 20px;
+        }
+
+        .results-link-button:hover {
+            background: #45a049;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+        }
+
         /* Responsive adjustments for this page */
         @media (max-width: 768px) {
             .page-hero h1 {
                 font-size: 2.5rem;
             }
-            .content-section h2 {
+            .content-section h2, .results-display-section h2 {
                 font-size: 1.8rem;
             }
             .google-form-link-container, .results-info {
@@ -352,7 +396,7 @@
                 <p>Click the button below to securely upload your data via our Google Form:</p>
                 <!-- IMPORTANT: REPLACE THE 'href' URL BELOW WITH YOUR ACTUAL PUBLISHED GOOGLE FORM LIVE URL -->
                 <!-- To get the URL: Go to your Google Form -> Click 'Send' -> Choose the 'Link' icon -> Copy the entire URL. -->
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSc3-kza64tz0o1kpGmiAwyK5_wNmtjYlbq8UHCWfVLot5zBFw/viewform?usp=sharing&ouid=103924858686153020410" target="_blank" class="google-form-button">Open Data Upload Form</a>
+                <a href="YOUR_GOOGLE_FORM_LIVE_URL_HERE" target="_blank" class="google-form-button">Open Data Upload Form</a>
             </div>
 
             <div class="results-info">
@@ -362,6 +406,17 @@
                 <p>For any questions, please <a href="index.html#contact">contact us</a>.</p>
             </div>
 
+        </div>
+    </section>
+
+    <section class="results-display-section">
+        <div class="container">
+            <h2>View Your Causal Impact Reports</h2>
+            <p>After you've submitted your data and we've processed your analysis, you can find your detailed Causal Impact reports here. Reports are typically available within [X hours/days] of submission.</p>
+            <!-- IMPORTANT: REPLACE THE 'href' URL BELOW WITH THE ACTUAL GITHUB PAGES URL FOR YOUR GENERATED REPORT -->
+            <!-- Example: https://rahulu269.github.io/aifixpro-site/results/your_report_name.html -->
+            <a href="https://rahulu269.github.io/aifixpro-site/causal_impact_chart.html" target="_blank" class="results-link-button">Access Your Report</a>
+            <p style="margin-top: 20px; font-size: 0.9rem; color: #888;">(Note: This link is a placeholder. You MUST replace 'causal_impact_chart.html' with the exact name of your uploaded HTML report file if it's different. If it's in a subfolder like 'results', the link should be 'https://rahulu269.github.io/aifixpro-site/results/your_report_name.html')</p>
         </div>
     </section>
 
