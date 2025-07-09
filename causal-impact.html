@@ -168,30 +168,49 @@
             line-height: 1.8;
             color: #ccc; /* Lighter text for main paragraphs */
         }
-        .google-form-container {
+        
+        /* New styles for the direct link to Google Form */
+        .google-form-link-container {
             margin-top: 50px;
-            background: rgba(255, 255, 255, 0.05); /* Slightly transparent white background */
+            background: rgba(255, 255, 255, 0.05);
             padding: 40px;
             border-radius: 10px;
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
-            border: 1px solid rgba(33, 150, 243, 0.3); /* Blue border */
-            
-            /* Responsive iframe embed trick */
-            position: relative;
-            padding-bottom: 75%; /* Aspect ratio 4:3. Adjust as needed for your form's height. For 16:9, use 56.25% */
-            height: 0;
-            overflow: hidden;
+            border: 1px solid rgba(33, 150, 243, 0.3);
+            text-align: center; /* Center the button/link */
         }
-        .google-form-container iframe {
-            position: absolute;
-            top:0;
-            left:0;
-            width: 100%;
-            height: 100%;
-            border: 0; /* Remove iframe default border */
+
+        .google-form-link-container p {
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+            color: #ccc;
+            max-width: 600px; /* Constrain text width */
+            margin-left: auto;
+            margin-right: auto;
         }
+
+        .google-form-button {
+            display: inline-block; /* Allows padding and margin */
+            background: #2196F3; /* Blue background */
+            color: #fff; /* White text */
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none; /* Remove underline from link */
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .google-form-button:hover {
+            background: #1a71c2; /* Darker blue on hover */
+            transform: translateY(-2px); /* Slight lift effect */
+            box-shadow: 0 5px 15px rgba(33, 150, 243, 0.4);
+        }
+
         .results-info {
             margin-top: 30px; /* Space above this box */
             padding: 20px;
@@ -199,7 +218,7 @@
             border-left: 5px solid #2196F3; /* Blue border on the left */
             border-radius: 5px;
             text-align: left; /* Align text to the left within this box */
-            max-width: 700px; /* Match form width */
+            max-width: 700px; /* Match container width */
             margin-left: auto;
             margin-right: auto;
             color: #ccc; /* Lighter text for readability */
@@ -231,7 +250,7 @@
             .content-section h2 {
                 font-size: 1.8rem;
             }
-            .google-form-container, .results-info {
+            .google-form-link-container, .results-info {
                 padding: 20px; /* Less padding on small screens for these containers */
             }
         }
@@ -327,12 +346,13 @@
     <section class="content-section">
         <div class="container">
             <h2>Upload Your Data for Analysis</h2>
-            <p>To begin your Causal Impact analysis, please upload your data file (CSV or Excel) using the secure Google Form below. Ensure your file is formatted correctly with your time series data and intervention points clearly marked.</p>
+            <p>Due to security restrictions, Google Forms with file upload questions cannot be embedded directly into websites. Please click the button below to open the form in a new tab to upload your data.</p>
 
-            <div class="google-form-container">
-                <!-- IMPORTANT: REPLACE THE 'src' URL BELOW WITH YOUR ACTUAL PUBLISHED GOOGLE FORM EMBED URL -->
-                <!-- To get the URL: Go to your Google Form -> Click 'Send' -> Choose the '< >' (embed) tab -> Copy the 'src' URL from the iframe code. -->
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc3-kza64tz0o1kpGmiAwyK5_wNmtjYlbq8UHCWfVLot5zBFw/viewform?usp=dialog" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            <div class="google-form-link-container">
+                <p>Click the button below to securely upload your data via our Google Form:</p>
+                <!-- IMPORTANT: REPLACE THE 'href' URL BELOW WITH YOUR ACTUAL PUBLISHED GOOGLE FORM LIVE URL -->
+                <!-- To get the URL: Go to your Google Form -> Click 'Send' -> Choose the 'Link' icon -> Copy the entire URL. -->
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSc3-kza64tz0o1kpGmiAwyK5_wNmtjYlbq8UHCWfVLot5zBFw/viewform?usp=sharing&ouid=103924858686153020410" target="_blank" class="google-form-button">Open Data Upload Form</a>
             </div>
 
             <div class="results-info">
